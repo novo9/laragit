@@ -13,8 +13,24 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::get('foo', function(){
+   return 'Hello world';
+});
+
+Route::match(['get','post'],'/'/function(){
 
 
+});
+
+Route::post('/user/{id}',function(Request $id){
+
+    return 'User id: '.$id;
+
+
+});
+Route::get('user/{id?}',function($userId = '1'){
+    return $name;
+});
 
 Route::auth();
 
